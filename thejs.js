@@ -222,7 +222,7 @@ function myStory(parentJson, folder, addToDom) {
   var rootJson = parentJson.data;
   this.rootJson = rootJson;
   this.folder = folder;
-  var previewHTML = '<div id="%id" class="anemail emailunread"><div class="emailicon"></div><div class="emailiconright"></div><div class="emailpreview"><div class="emailname">%randomname (%author)</div><div class="emailtitle">(RE:^%score)  %title</div></div></div>';
+  var previewHTML = '<div id="%id" class="anemail emailunread"><div class="emailicon"></div><div class="emailiconright"></div><div class="emailpreview"><div class="emailname">%randomname (%author)</div><div class="emailtitle">(RE:^%score)  %title | <br /><span style="color: #3498DB">%subreddit</span></div></div></div>';
   var name = getRandomName();
   var author = rootJson.author;
   this.id = rootJson.name;
@@ -239,6 +239,7 @@ function myStory(parentJson, folder, addToDom) {
   previewHTML = previewHTML.replace('%randomname', name);
   previewHTML = previewHTML.replace('%score', score);
   previewHTML = previewHTML.replace('%title', this.title);
+  previewHTML = previewHTML.replace('%subreddit', rootJson.subreddit);
   previewHTML = previewHTML.replace('%id', this.id);
   this.previewHTML = previewHTML;
   this.bodyHTML = '';
