@@ -47,7 +47,7 @@ var randomNames = [
 	
 	];
 
-
+var idList = [];
 
 var globalStoryDict = {};
 
@@ -66,11 +66,21 @@ function myFolder()
 }
 
 var spawnEdge = 100;
+
+function generateUid() {
+  var uid = Math.floor((Math.random() * 100000) + 1);
+  if (idList.indexOf(uid) > -1) {
+    generateUid();
+    return;
+  }
+  return uid;
+}
+
 function myWindow(type, state, tofield, ccfield, subjectfield, bodyfield, isLogin)
 {
 	this.type = type;
 	this.state = state;
-	this.id = String(Math.floor(Math.random()*10000));
+	this.id = String(generateUid());
 	this.tofield = tofield;
 	this.ccfield = ccfield;
 	this.subjectfield = subjectfield;
@@ -528,7 +538,7 @@ function unEncode(text)
 	//this is a bit ridiculous, but i think we are going to add
 	//imgur expansion support via regular expressions :O
 	numcaptures = 4; //number of results per match
-	results = /<a href="(http:.*?\.(jpg|jpeg|png|gif|JPEG|GIF|PNG))".*?>(.*?)<\/a>/gi.exec(text);
+	results = /<a href="(http:.*?\.(jpg|jpeg|png|gif|gifv|GIFV|JPEG|GIF|PNG))".*?>(.*?)<\/a>/gi.exec(text);
 
 
 
@@ -546,7 +556,7 @@ function unEncode(text)
 		text = text.replace(complete,tempHTML);
 
 		var tosearch = text.substr(text.indexOf(tempHTML)+tempHTML.length);
-		results = /<a href="(http:.*?\.(jpg|jpeg|png|gif|JPEG|GIF|PNG))".*?>(.*?)<\/a>/gi.exec(text.substr(text.indexOf(tempHTML)+tempHTML.length));
+		results = /<a href="(http:.*?\.(jpg|jpeg|png|gif|gifv|GIFV|JPEG|GIF|PNG))".*?>(.*?)<\/a>/gi.exec(text.substr(text.indexOf(tempHTML)+tempHTML.length));
 	}
 	//do this again for IDIOTS WHO DONT LINK TO THE IMAGE DIRECTLY!!!
 	results = /<a.*?href="(http:\/\/imgur.com\/(\w+))".*?>(.*?)<\/a>/g.exec(text);
