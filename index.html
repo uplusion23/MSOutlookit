@@ -403,10 +403,16 @@ td.right:hover * .child12 {
 .leftcollower {
 	background-image:url('lowerleft.png');
 	position:fixed;
-	left:-2px;
+	left:-3px;
 	bottom:80px;
 	width:242px;
 	height:55px;
+}
+
+@-moz-document url-prefix() { 
+  .leftcollower {
+	left:-2px;
+  }
 }
 
 .commentauthor {
