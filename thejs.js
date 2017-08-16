@@ -297,7 +297,6 @@ function commentsCallback(storyJSON) {
     }
   }
   story.bodyHTML = unEncode(story.bodyHTML);
-  story.bodyHTML += '<a id="r' + theStoryID + '" href="javascript:void(0)" class="textreplybutton storyreply">Reply to the Link</a>';
   story.bodyHTML += '<div class="storycommentline"></div>';
   var commentsRoot = storyJSON[1].data.children;
   var commentsHTML = '';
@@ -329,7 +328,6 @@ function makeCommentHeader(score, author, body_html, id) {
   commentsHTML += '<div id="' + id + '" class="commentroot">';
   commentsHTML += '<div class="authorandstuff showhover">';
   commentsHTML += '<span class="score">' + score + '</span> <span class="commentauthor">' + author + '</span>';
-  commentsHTML += '  <a id="r' + id + '" href="javascript:void(0)" class="textreplybutton"> Reply</a>';
   commentsHTML += '</div>';
   commentsHTML += '<div class="commentbody">' + body_html + '</div>';
   return commentsHTML;
