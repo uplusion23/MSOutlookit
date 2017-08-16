@@ -296,8 +296,6 @@ function commentsCallback(storyJSON) {
     }
   }
   story.bodyHTML = unEncode(story.bodyHTML);
-  story.bodyHTML += '<div class="uparrow storyup" id="u' + theStoryID + '"></div>';
-  story.bodyHTML += '<div class="downarrow storydown" id="d' + theStoryID + '"></div>';
   story.bodyHTML += '<a id="r' + theStoryID + '" href="javascript:void(0)" class="textreplybutton storyreply">Reply to the Link</a>';
   story.bodyHTML += '<div class="storycommentline"></div>';
   var commentsRoot = storyJSON[1].data.children;
