@@ -865,7 +865,6 @@ $(document).ready(function() {
   makeFolder('wtf');
   $('#folder_FrontPage').parent().addClass('foldwraphi');
   folderClick('folder_FrontPage');
-  makeSoftpopup('Welcome! If you are a lawyer, this is no way affiliated with Microsoft or trying to replicate the functionality of MS Outlook. Not like that will stop you from ruining the party though :P');
   $('.outlookmin').click(function() {
     for (key in globalWindowDict) {
       globalWindowDict[key].minimize();
