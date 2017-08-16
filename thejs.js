@@ -845,11 +845,17 @@ function spawnCommandWindow() {
   usage += "\thttp://www.reddit.com/r/gaming/comments/jkiu2/battlefield_3_caspian_border_gameplay_hd";
   var asd = new myWindow('', '', '', '', '', usage, true);
 }
+
+function addSubReddit() {
+    var subreddit = prompt("Please enter a subreddit name");
+    if (subreddit != null) {
+        makeFolder(subreddit);
+    }
+}
 $(document).ready(function() {
-  updateClock();
   onResize();
   $(window).resize(onResize);
-  $('.newemailbutton').click(spawnCommandWindow);
+  $('.newemailbutton').click(addSubReddit);
   main_inbox = makeFolder('Front Page');
   makeFolder('gaming');
   makeFolder('pics');
