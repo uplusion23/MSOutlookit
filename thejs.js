@@ -549,39 +549,7 @@ function onResize() {
   $('.folderholder').height($(window).height() - 550 + noTaskbar * 60);
 }
 
-function toggleTaskbar() {
-  if (noTaskbar) {
-    showTaskbar();
-  } else {
-    hideTaskbar();
-  }
-}
 
-function showTaskbar() {
-  noTaskbar = 0;
-  $('.start').show();
-  $('.startbanner').show();
-  $('.icons').show();
-  $('.iconsbanner').show();
-  $('.minholder').show();
-  onResize();
-  $('.clockholder').show();
-  $('.bottombar').css('bottom', '60px');
-  $('.leftcollower').css('bottom', '80px');
-}
-
-function hideTaskbar() {
-  noTaskbar = 1;
-  $('.start').hide();
-  $('.startbanner').hide();
-  $('.icons').hide();
-  $('.iconsbanner').hide();
-  $('.minholder').hide();
-  $('.clockholder').hide();
-  $('.bottombar').css('bottom', '0px');
-  $('.leftcollower').css('bottom', '20px');
-  onResize();
-}
 
 function onReload() {
   $('.anemail').click(emailClick);
@@ -909,5 +877,4 @@ $(document).ready(function() {
       }
     }
   });
-  hideTaskbar();
 });
