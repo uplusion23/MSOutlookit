@@ -455,7 +455,7 @@ function expandoClick() {
     var idFinder = finder;
     var height = $(idFinder).children('.ui-wrapper').height();
     var width = $(idFinder).children('.ui-wrapper').width();
-    $(idFinder).children('.ui-wrapper').children('.ui-resizable-e').width(width);
+    $(idFinder).children('.ui-wrapper').children('.ui-resizable-e').width(width-10);
     $(idFinder).children('.ui-wrapper').children('.ui-resizable-e').height(height);
     $(idFinder).children('.ui-wrapper').children('.ui-resizable-e').css('top', '-' + String(height) + 'px');
   }
