@@ -848,7 +848,7 @@ $(document).ready(function() {
   makeFolder('gaming');
   makeFolder('pics');
   makeFolder('askreddit');
-  makeFolder('reddit.com');
+  makeFolder('jokes');
   makeFolder('funny');
   makeFolder('iama');
   makeFolder('wtf');
