@@ -673,7 +673,7 @@ function displayFolder(folder_name) {
     for (key in globalFolderDict[folder_name].emailDict) {
       globalFolderDict[folder_name].emailDict[key].addToArea();
     }
-    $('#previewarea').append('<input type="button" value="Moar! now it works :D" onclick="moarButton()" >');
+    $('#previewarea').append('<input type="button" value="Load more posts" onclick="moarButton()" >');
     onReload();
   }
 }
