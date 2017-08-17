@@ -534,7 +534,7 @@ function onResize() {
   $('.theemailbody').height($(window).height() - 146 + noTaskbar * 60);
   $('.right').width($(window).width() - 595 + noTaskbar * 60);
   $('.minholder').width($(window).width() - (180 + 170) + noTaskbar * 60);
-  $('.folderholder').height($(window).height() - 550 + noTaskbar * 60);
+  $('.folderholder').height($(window).height() - 490 + noTaskbar * 60);
 }
 
 
