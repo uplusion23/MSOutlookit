@@ -493,11 +493,11 @@ function makeYoutubeExpando(externallink, title) {
 }
 
 function getLynxdump(externallink, title) {
-  //var randId = String(Math.floor(Math.random() * 100000));
-  //var expando = '<div class="lynxexpando showhover" id="' + randId + '">Lynx</div>';
-  //expando += '<a id="lynxlink' + randId + '" href="' + externallink + '">' + title + '</a>';
-  //expando += '<div id="lynxexpando' + randId + '" class="lynxexpandodiv" style="display:none"></div>';
-  //return expando;
+  var randId = String(Math.floor(Math.random() * 100000));
+  var expando = '<div class="lynxexpando showhover" id="' + randId + '">Lynx</div>';
+  expando += '<a id="lynxlink' + randId + '" href="' + externallink + '">' + title + '</a>';
+  expando += '<div id="lynxexpando' + randId + '" class="lynxexpandodiv" style="display:none"></div>';
+  return expando;
 }
 
 function isYoutube(externallink) {
